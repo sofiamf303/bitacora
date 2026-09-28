@@ -355,6 +355,146 @@ nav a:focus-visible {
 }
 
 
+/* Contenedor de componentes */
+.componentes {
+    width: 100%;
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Botones */
+.btn {
+    width: auto;
+    margin: 0.25rem;
+    padding: 0.75rem 1rem;
+}
+
+.btn-primario {
+    background-color: var(--action-primary);
+}
+
+.btn-secundario {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--text-muted);
+}
+
+.btn-secundario:hover {
+    color: var(--text-on-dark);
+    background-color: var(--action-hover);
+}
+
+.btn-peligro {
+    background-color: var(--status-error);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Campos con error */
+.campo-error {
+    border-color: var(--status-error);
+}
+
+.mensaje-error {
+    margin-top: 0.25rem;
+    color: var(--status-error);
+    font-size: var(--font-size-small);
+}
+
+/* Alerta */
+.alerta {
+    padding: 1rem;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--status-warning);
+    border-radius: 0.25rem;
+}
+
+/* Modal */
+.modal-demo {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.modal-contenido {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--text-muted);
+    border-radius: 0.5rem;
+}
+
+/* Imágenes flexibles */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Componentes en pantallas pequeñas */
+@media (min-width: 480px) {
+    .componentes {
+        padding: 1.5rem;
+    }
+}
+
+/* Tableta */
+@media (min-width: 768px) {
+    .componentes {
+        padding: 2rem;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+    .componentes {
+        max-width: 70rem;
+    }
+}
+
+/* Escritorio amplio */
+@media (min-width: 1280px) {
+    .componentes {
+        max-width: 80rem;
+    }
+}
+
+.boton-menu {
+    display: none;
+    width: auto;
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem;
+}
+
+@media (max-width: 767px) {
+
+    .menu-lateral {
+        padding: 1rem;
+    }
+
+    .boton-menu {
+        display: block;
+    }
+
+    .menu-lateral nav {
+        display: none;
+    }
+
+    .menu-lateral.abierto nav {
+        display: block;
+    }
+}
+
+
 
 
 

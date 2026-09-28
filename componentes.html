@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes - NexoStock</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>NexoStock</h1>
+        <p>Guía de componentes</p>
+    </header>
+
+    <main class="componentes">
+
+        <section>
+            <h2>Botones</h2>
+
+            <button class="btn btn-primario">Primario</button>
+            <button class="btn btn-secundario">Secundario</button>
+            <button class="btn btn-peligro">Peligro</button>
+            <button class="btn" disabled>Deshabilitado</button>
+        </section>
+
+        <section>
+            <h2>Campos de formulario</h2>
+
+            <label for="campo-normal">Campo normal:</label>
+            <input
+                type="text"
+                id="campo-normal"
+                placeholder="Escribe algo"
+            >
+
+            <label for="campo-error">Campo con error:</label>
+            <input
+                type="text"
+                id="campo-error"
+                class="campo-error"
+                value="Dato incorrecto"
+                aria-describedby="mensaje-error"
+            >
+            <p id="mensaje-error" class="mensaje-error">
+                Este campo contiene un error.
+            </p>
+        </section>
+
+        <section>
+            <h2>Tarjeta de indicador</h2>
+
+            <article class="tarjeta">
+                <h3>Productos</h3>
+                <p>25</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Tabla de datos</h2>
+
+            <div class="tabla-resumen">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Stock</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Producto ejemplo</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Producto 2</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Mensaje de alerta</h2>
+
+            <div class="alerta">
+                El stock de algunos productos es bajo.
+            </div>
+        </section>
+
+        <section>
+            <h2>Ventana modal</h2>
+
+            <div class="modal-demo">
+                <div class="modal-contenido">
+                    <h3>Confirmar acción</h3>
+                    <p>¿Deseas continuar con esta operación?</p>
+                    <button class="btn btn-primario">Aceptar</button>
+                    <button class="btn btn-secundario">Cancelar</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NexoStock</p>
+    </footer>
+
+</body>
+</html>
