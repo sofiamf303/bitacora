@@ -312,8 +312,10 @@ nav a:focus-visible {
 }
 
 .tabla-resumen table {
-    min-width: 100%;
+    width: 100%;
+    min-width: 0;
 }
+
 
 /* Pie */
 .pie {
@@ -345,7 +347,7 @@ nav a:focus-visible {
     }
 
     .menu-lateral ul {
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
@@ -492,6 +494,10 @@ img {
     .menu-lateral.abierto nav {
         display: block;
     }
+}
+/* Ancho de la página de productos */
+main:has(#tablaProductos) {
+    max-width: 70rem;
 }
 
 
