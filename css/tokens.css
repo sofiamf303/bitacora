@@ -1,0 +1,22 @@
+:root {
+  /* Esquema de Armonía: Monocromático Azul */
+
+  /* Colores de Fondo (Dominante) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f4f4;
+  --bg-dark: #004080;
+
+  /* Colores de Texto y Estructura (Apoyo) */
+  --text-primary: #072146;
+  --text-muted: #365a78;
+  --text-on-dark: #ffffff;
+
+  /* Colores Interactivos y Destacados (Acento) */
+  --action-primary: #0066cc;
+  --action-hover: #004c99;
+
+  /* Estados del Sistema (Semánticos) */
+  --status-success: #2b7d2b;
+  --status-warning: #a64b00;
+  --status-error: #bb0000;
+}
