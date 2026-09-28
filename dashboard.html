@@ -4,46 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - NexoStock</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>NexoStock</h1>
-        <p>Panel principal</p>
-    </header>
+    <div class="dashboard">
 
-    <nav aria-label="Navegación principal">
-        <ul>
-            <li><a href="dashboard.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="login.html">Cerrar sesión</a></li>
-        </ul>
-    </nav>
+        <header class="barra-superior">
+            <h1>NexoStock</h1>
+            <p>Panel principal</p>
+        </header>
 
-    <main>
-        <section>
-            <h2>Resumen del sistema</h2>
+        <aside class="menu-lateral">
+            <nav aria-label="Menú principal">
+                <h2>Menú</h2>
+                <ul>
+                    <li><a href="dashboard.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="login.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-            <article>
-                <h3>Ventas del día</h3>
-                <p>$0</p>
-            </article>
+        <main class="contenido">
+            <section>
+                <h2>Resumen</h2>
 
-            <article>
-                <h3>Productos registrados</h3>
-                <p>0 productos</p>
-            </article>
+                <div class="tarjetas">
 
-            <article>
-                <h3>Stock bajo</h3>
-                <p>0 productos</p>
-            </article>
-        </section>
-    </main>
+                    <article class="tarjeta">
+                        <h3>Ventas</h3>
+                        <p>$0</p>
+                    </article>
 
-    <footer>
-        <p>&copy; 2026 NexoStock</p>
-    </footer>
+                    <article class="tarjeta">
+                        <h3>Productos</h3>
+                        <p>0</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Stock bajo</h3>
+                        <p>0</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Pedidos</h3>
+                        <p>0</p>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="tabla-resumen">
+                <h2>Actividad reciente</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Stock</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Producto ejemplo</td>
+                            <td>General</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Otro producto</td>
+                            <td>General</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Producto 3</td>
+                            <td>General</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Producto 4</td>
+                            <td>General</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Producto 5</td>
+                            <td>General</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <p>&copy; 2026 NexoStock</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>

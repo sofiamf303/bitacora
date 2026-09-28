@@ -192,6 +192,168 @@ nav a:focus-visible {
 }
 
 
+/* Estructura general del dashboard */
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "barra barra"
+        "menu contenido"
+        "pie pie";
+}
+
+/* Barra superior */
+.barra-superior {
+    grid-area: barra;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 2rem;
+    color: var(--text-on-dark);
+    background-color: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.barra-superior h1,
+.barra-superior p {
+    margin: 0;
+}
+
+/* Menú lateral */
+.menu-lateral {
+    grid-area: menu;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+}
+
+.menu-lateral nav {
+    background-color: transparent;
+    padding: 0;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 0.75rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.menu-lateral a:hover {
+    color: var(--text-on-dark);
+    background-color: var(--action-primary);
+}
+
+.menu-lateral a:focus-visible {
+    outline: 3px solid var(--action-primary);
+    outline-offset: 2px;
+}
+
+/* Área de contenido */
+.contenido {
+    grid-area: contenido;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--bg-primary);
+}
+
+/* Fila de tarjetas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Tarjetas */
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    min-width: 0;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--text-muted);
+    border-radius: 0.5rem;
+}
+
+.tarjeta h3,
+.tarjeta p {
+    margin: 0;
+}
+
+.tarjeta p {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+
+/* Tabla del dashboard */
+.tabla-resumen {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.tabla-resumen table {
+    min-width: 100%;
+}
+
+/* Pie */
+.pie {
+    grid-area: pie;
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-on-dark);
+    background-color: var(--bg-dark);
+}
+
+.pie p {
+    margin: 0;
+}
+
+/* Adaptación para ventanas pequeñas */
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "barra"
+            "menu"
+            "contenido"
+            "pie";
+    }
+
+    .menu-lateral {
+        padding: 1rem;
+    }
+
+    .menu-lateral ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contenido {
+        padding: 1rem;
+    }
+}
+
 
 
 
