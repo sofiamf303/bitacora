@@ -4,18 +4,10 @@ COLLATE utf8mb4_general_ci;
 
 USE nexostock;
 
--- =========================================
--- 1. CATEGORÍAS
--- =========================================
-
 CREATE TABLE categorias (
     id_categoria INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL UNIQUE
 );
-
--- =========================================
--- 2. PRODUCTOS
--- =========================================
 
 CREATE TABLE productos (
     id_producto INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -33,20 +25,12 @@ CREATE TABLE productos (
         ON DELETE RESTRICT
 );
 
--- =========================================
--- 3. CLIENTES
--- =========================================
-
 CREATE TABLE clientes (
     id_cliente INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(150) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
     telefono VARCHAR(30)
 );
-
--- =========================================
--- 4. PEDIDOS
--- =========================================
 
 CREATE TABLE pedidos (
     id_pedido INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -62,10 +46,6 @@ CREATE TABLE pedidos (
         ON UPDATE CASCADE
         ON DELETE RESTRICT
 );
-
--- =========================================
--- 5. DETALLE DE PEDIDOS
--- =========================================
 
 CREATE TABLE detalle_pedido (
     id_detalle INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -90,15 +70,28 @@ CREATE TABLE detalle_pedido (
         ON DELETE RESTRICT
 );
 
--- =========================================
--- 6. USUARIOS
--- =========================================
-
 CREATE TABLE usuarios (
-    id_usuario INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(150) NOT NULL,
-    usuario VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    rol VARCHAR(30) NOT NULL DEFAULT 'empleado'
+    correo VARCHAR(150) NOT NULL UNIQUE,
+    clave_hash VARCHAR(255) NOT NULL,
+    rol VARCHAR(30) NOT NULL DEFAULT 'vendedor',
+    activo TINYINT(1) NOT NULL DEFAULT 1,
+    bloqueado_hasta DATETIME NULL,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE intentos_acceso (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT UNSIGNED NULL,
+    correo VARCHAR(150) NOT NULL,
+    fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    exitoso TINYINT(1) NOT NULL DEFAULT 0,
+
+    INDEX idx_intentos_correo_fecha (correo, fecha),
+
+    CONSTRAINT fk_intentos_usuario
+        FOREIGN KEY (id_usuario)
+        REFERENCES usuarios(id)
+        ON DELETE SET NULL
+);
