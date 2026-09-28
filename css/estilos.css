@@ -495,12 +495,34 @@ img {
         display: block;
     }
 }
-/* Ancho de la página de productos */
-main:has(#tablaProductos) {
+/* Página de productos */
+.pagina-productos {
     max-width: 70rem;
 }
 
+/* Página de productos */
+.pagina-productos {
+    width: 100%;
+    max-width: 70rem;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
 
+.pagina-productos section {
+    width: 100%;
+    max-width: none;
+}
+
+.pagina-productos .tabla-resumen {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.pagina-productos table {
+    width: 100%;
+    max-width: 100%;
+}
 
 
 
