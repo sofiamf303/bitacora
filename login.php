@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $_SESSION['csrf_token'] =
                             bin2hex(random_bytes(32));
 
-                        header('Location: dashboard.html');
+                        header('Location: dashboard.php');
                         exit;
 
                     } else {
