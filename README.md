@@ -1,12 +1,43 @@
-Evidencia del Día: Diseño y Teoría del Color
+# NexoStock – Sistema de Gestión de Inventario
 
-Este repositorio contiene las actividades prácticas correspondientes al Día 1 sobre la teoría del color aplicada al diseño de interfaces (UI).
+NexoStock es un proyecto académico desarrollado como parte de mi formación en el programa Técnico en Programación de Software del SENA.
 
- Contenido del Repositorio
-*   Círculo Cromático: Dibujo a mano alzada de 12 matices (incluido en el PDF).
-*   Análisis de Interfaces: Estudio cromático de BBVA, Mercado Libre y SAP.
-*   Escala de Tonos: Paleta de 5 tonos generada mediante valores HSL.
-*   Documento Final: `dia01-color.pdf`
+Su objetivo es desarrollar una aplicación web para apoyar la gestión y el control de inventario, facilitando la administración de productos y el seguimiento de las operaciones relacionadas con el inventario.
 
- Estudiante: Ana Sofia Martinez Fajardo
-*   Ficha: 3411795 P. Software
+## Tecnologías utilizadas
+
+- PHP
+- MySQL
+- HTML5
+- CSS3
+- JavaScript
+
+## Características del proyecto
+
+El proyecto contempla el desarrollo de funcionalidades relacionadas con:
+
+- Gestión de productos.
+- Control de inventario y existencias.
+- Administración de operaciones.
+- Organización y almacenamiento de información mediante una base de datos.
+
+*Nota: El alcance y las funcionalidades se encuentran sujetos al avance actual del desarrollo.*
+
+## Diseño
+
+El proyecto utiliza una propuesta visual basada en un diseño monocromático azul, con una interfaz orientada a la claridad y facilidad de uso.
+
+## Estado del proyecto
+
+Proyecto académico en desarrollo.
+
+Este repositorio también contiene evidencias y documentación del proceso de desarrollo, correspondientes a una guía de recuperación de 15 días, de la cual se documentaron actividades hasta el día 11.
+
+## Propósito
+
+Aplicar los conocimientos adquiridos durante mi formación en programación, bases de datos y desarrollo web, fortaleciendo mis habilidades técnicas mediante un proyecto práctico.
+
+---
+
+**Desarrollado por:** Ana Sofía Martínez Fajardo  
+**Formación:** Técnico en Programación de Software – SENA
