@@ -37,7 +37,29 @@ Este repositorio también contiene evidencias y documentación del proceso de de
 
 Aplicar los conocimientos adquiridos durante mi formación en programación, bases de datos y desarrollo web, fortaleciendo mis habilidades técnicas mediante un proyecto práctico.
 
----
 
 **Desarrollado por:** Ana Sofía Martínez Fajardo  
 **Formación:** Técnico en Programación de Software – SENA
+
+
+## Base de datos
+
+El proyecto utiliza **MySQL** como sistema de gestión de bases de datos y PDO para establecer la conexión desde PHP.
+
+La base de datos se denomina `nexostock` y está organizada mediante tablas relacionadas que permiten administrar productos, categorías, clientes, pedidos y usuarios.
+
+### Estructura
+
+- `categorias`: almacena las categorías de los productos.
+- `productos`: registra los productos, sus precios, existencias y categorías.
+- `clientes`: almacena la información de los clientes.
+- `pedidos`: registra los pedidos realizados.
+- `detalle_pedido`: relaciona los productos con cada pedido.
+- `usuarios`: almacena las cuentas de acceso y sus roles.
+- `intentos_acceso`: registra los intentos de autenticación.
+
+### Configuración
+
+El proyecto incluye archivos SQL para crear la estructura de la base de datos y cargar datos de prueba.
+
+La conexión con MySQL se realiza mediante PDO, utilizando un archivo de configuración independiente para las credenciales.
